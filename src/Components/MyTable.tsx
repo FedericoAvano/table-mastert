@@ -2,6 +2,8 @@ import * as React from 'react';
 import { DataGrid, GridColDef, GridSortCellParams, GridCellParams } from '@material-ui/data-grid';
 import { Button } from '@material-ui/core';
 
+
+
 function getFullName(params: GridSortCellParams) {
   return `${params.getValue('firstName') || ''} ${
     params.getValue('lastName') || ''
@@ -24,10 +26,12 @@ const columns: GridColDef[] = [
     <strong>
       {(params.value as GridColDef)}
       <Button
-        variant="contained"
-        color="primary"
-        size="small"
-        style={{ marginLeft: 0 }}
+      variant="contained"
+      color="primary"
+      size="small"
+      style={{ marginLeft: 0 }}
+      target="_self"
+      href="https://reactjs.org/"
       >
        Credentials
       </Button>

@@ -1,7 +1,7 @@
 import React from 'react';
-import MyTable from './Components/MyTable'
 import { makeStyles, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
-import PageHeader from './Components/PageHeader';
+import PageHeader from '../Components/PageHeader';
+import MyTextField from '../Components/MyTextField' 
 
 const theme = createMuiTheme({
   palette: {
@@ -41,17 +41,17 @@ const useStyles = makeStyles({
 })
 
 
-function App() {
+function PageTwo() {
   const classes =useStyles();
   return (
     <ThemeProvider theme={theme}>
     <div className={classes.appMain}>
       <PageHeader title="Tab Test" subTitle="Material UI Table test" />
-      <MyTable />
+      <MyTextField />
     </div>
     <CssBaseline />
     </ThemeProvider>
   );
 }
 
-export default App;
+export default PageTwo;
